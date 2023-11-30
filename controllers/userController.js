@@ -6,21 +6,21 @@ export const registerController = async (req, res) => {
     const { name, email, password, address, city, country, phone, answer } =
       req.body;
     // validation
-    if (
-      !name ||
-      !email ||
-      !password ||
-      !city ||
-      !address ||
-      !country ||
-      !phone ||
-      !answer
-    ) {
-      return res.status(500).send({
-        success: false,
-        message: "Please Provide All Fields",
-      });
-    }
+    // if (
+    //   !name ||
+    //   !email ||
+    //   !password ||
+    //   !city ||
+    //   !address ||
+    //   !country ||
+    //   !phone ||
+    //   !answer
+    // ) {
+    //   return res.status(500).send({
+    //     success: false,
+    //     message: "Please Provide All Fields",
+    //   });
+    // }
     //check exisiting user
     const exisitingUSer = await userModel.findOne({ email });
     //validation
