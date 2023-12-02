@@ -27,10 +27,10 @@ const router = express.Router();
 
 //routes
 // register
-router.post("/register", limiter, registerController);
+router.post("/register",registerController);
 
 //login
-router.post("/login", limiter, loginController);
+router.post("/login", loginController);
 
 //profile
 router.get("/profile", isAuth, getUserProfileController);
