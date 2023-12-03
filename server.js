@@ -31,7 +31,7 @@ const app = express();
 
 //middlewares
 app.use(express.json());
-express.urlencoded({ extended: false, })
+app.use(express.urlencoded({ extended: false, }));
 app.use(helmet());
 app.use(mongoSanitize());
 app.use(morgan("dev"));
