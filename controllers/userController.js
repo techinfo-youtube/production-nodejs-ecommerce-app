@@ -5,7 +5,7 @@ export const registerController = async (req, res) => {
   try {
     const { name, email, password, address, city, country, phone, answer } =
       req.body;
-    validation
+   //validation
     if (
       !name ||
       !email ||
