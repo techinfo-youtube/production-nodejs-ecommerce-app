@@ -30,10 +30,11 @@ cloudinary.v2.config({
 const app = express();
 
 //middlewares
+app.use(express.json());
+express.urlencoded({ extended: false, })
 app.use(helmet());
 app.use(mongoSanitize());
 app.use(morgan("dev"));
-app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
 
